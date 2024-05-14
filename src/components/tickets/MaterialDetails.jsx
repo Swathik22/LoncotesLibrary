@@ -10,7 +10,9 @@ export default function MaterialDetails() {
 
   //add useEffect here to get the ticket details from the API
   useEffect(() => {
-    getMaterial(id).then(setMaterial);
+    getMaterial(id).then(data=>{
+      setMaterial(data[0])
+    });
   }, []);
 
   if (!material) {
