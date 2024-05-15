@@ -14,6 +14,7 @@ export const PatronList=()=>
 
     const handleDeactivate=(e)=>{
         deactivatePatron(e.target.name).then(() => {
+            getPatrons().then(setAllPatrons);
             navigate("/patrons")}
         )
     }

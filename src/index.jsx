@@ -12,6 +12,7 @@ import { EditPatron } from "./components/tickets/EditPaton";
 import { Checkouts } from "./components/tickets/Checkouts";
 import { AvailableMaterials } from "./components/tickets/AvailableMaterials";
 import { MaterialCheckout } from "./components/tickets/MaterialCheckout";
+import { OverdueCheckouts } from "./components/tickets/OverdueCheckouts";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -34,6 +35,9 @@ root.render(
         <Route path="browse">
           <Route index element={<AvailableMaterials/>}/>
           <Route path=":id" element={<MaterialCheckout/>}/>
+        </Route>
+        <Route path="OverdueCheckouts">
+          <Route index element={<OverdueCheckouts/>}/>
         </Route>
       </Route>
     </Routes>
