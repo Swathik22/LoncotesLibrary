@@ -16,3 +16,20 @@ export const createMaterial = (material) => {
     body: JSON.stringify(material),
   }).then((res) => res.json());
 };
+
+export const removeMaterial=(id)=>{
+  return fetch(`${_apiUrl}/${id}/SetOutofCirculation`,{method:"POST"}).then(res=>{
+    if(res.status==204)
+    {
+        return null;
+    }
+    else
+    {
+        return res.json();
+    }
+});
+}
+
+export const getAvailableMaterials=()=>{
+  return fetch(`${_apiUrl}/available`).then((res)=>res.json());
+}

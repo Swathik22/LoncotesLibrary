@@ -26,3 +26,16 @@ export const updatePatron=(patron)=>{
         }
     });
 }
+
+export const deactivatePatron=(id)=>{
+    return fetch(`${_apiUrl}/${id}/deactivate`,{method:"POST"}).then(res=>{
+        if(res.status==204)
+        {
+            return null;
+        }
+        else
+        {
+            return res.json();
+        }
+    });
+}

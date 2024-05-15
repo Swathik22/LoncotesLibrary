@@ -93,8 +93,7 @@ export const EditPatron=()=>{
             value={patron.isActive?"Active":"InActive"}  
                       
           />
-        </FormGroup>
-        
+        </FormGroup>       
         <Button onClick={submit}>Update</Button>
       </Form>
     </div>

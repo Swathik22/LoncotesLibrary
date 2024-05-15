@@ -41,12 +41,13 @@ export const PatronDetails=()=>{
           <tr>
             <th scope="row">IsActive</th>
             <td>{patron.isActive?"Active":"In Active"}</td>
-          </tr>
+          </tr>          
           <tr>
             <td>
             <Link to={`/patrons/edit/${id}`}>Edit</Link>
             </td>
-          </tr>
+          </tr>          
+        
         </tbody>
       </Table>
       <h5>Checkouts</h5>
